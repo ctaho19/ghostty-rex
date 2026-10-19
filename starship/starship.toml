@@ -1,0 +1,15 @@
+# Rex-demo two-line prompt. Installed to ~/.config/starship.toml by install.sh.
+add_newline = false
+format = "$directory$git_branch$git_status\n$character"
+
+[directory]
+style = "bold white"
+truncation_length = 3
+
+[git_branch]
+format = " [$branch]($style)"
+style = "bright-black"
+
+[character]
+success_symbol = "[❯](#9ece6a)"
+error_symbol = "[❯](#f7768e)"

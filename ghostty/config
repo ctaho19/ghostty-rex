@@ -1,0 +1,42 @@
+# Rex-inspired Ghostty config (v2, from the co-founder demo videos)
+# Installed to ~/.config/ghostty/config by install.sh. Reload: Cmd+Shift+,
+# Needs Ghostty 1.2+ (for the "TokyoNight" theme name) and JetBrains Mono.
+
+# --- Colors: Tokyo Night, opaque, like the Rex demos ---
+theme = TokyoNight
+background = #1a1b26
+foreground = #c0caf5
+cursor-color = #c0caf5
+selection-background = #2a2a37
+selection-foreground = #c0caf5
+
+# --- Opaque window (the terminal area is not translucent in the demos) ---
+background-opacity = 1.0
+
+# --- Seamless titlebar: background runs to the top, traffic lights stay ---
+macos-titlebar-style = transparent
+window-theme = dark
+window-padding-x = 16
+window-padding-y = 16
+window-padding-balance = true
+
+# --- Font ---
+font-family = JetBrains Mono
+font-size = 13
+adjust-cell-height = 15%
+font-feature = +calt
+
+# --- Cursor ---
+cursor-style = block
+cursor-style-blink = false
+
+# --- Splits: thin dark divider like the 3-pane demo ---
+split-divider-color = #292e42
+unfocused-split-opacity = 0.9
+unfocused-split-fill = #16161e
+
+# --- Quality of life ---
+macos-option-as-alt = true
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+confirm-close-surface = false
