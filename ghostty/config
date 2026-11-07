@@ -1,16 +1,16 @@
 # Rex look for Ghostty 1.4
 #
-# Palette: Rex's own "Abyssal Trench" (dark) and "Ivory Gallery" (light),
-# extracted from Rex Beta.app. Typeface: JetBrains Mono, the font GoRex
-# embeds and the one in its screenshot.
+# Palette: Rex's own "Abyssal Trench", extracted from Rex Beta.app.
+# Typeface: JetBrains Mono, the font GoRex embeds and the one in its
+# screenshot.
 #
 # Themes live in ~/.config/ghostty/themes/. Reload with Cmd+Shift+,
 
-theme = dark:rex-abyssal-trench,light:rex-ivory-gallery
+theme = rex-abyssal-trench
 
 # --- Window: seamless titlebar, Rex's pane inset, glass over the desktop ---
 macos-titlebar-style = transparent
-window-theme = auto
+window-theme = dark
 window-padding-x = 14
 window-padding-y = 14
 window-padding-balance = true

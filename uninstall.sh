@@ -24,7 +24,6 @@ restore() {
 
 restore "${XDG_CONFIG_HOME:-$HOME/.config}/ghostty/config"
 restore "${XDG_CONFIG_HOME:-$HOME/.config}/ghostty/themes/rex-abyssal-trench"
-restore "${XDG_CONFIG_HOME:-$HOME/.config}/ghostty/themes/rex-ivory-gallery"
 restore "${XDG_CONFIG_HOME:-$HOME/.config}/starship.toml"
 
 for rc in "${ZDOTDIR:-$HOME}/.zshrc" "$HOME/.bashrc" "${XDG_CONFIG_HOME:-$HOME/.config}/fish/config.fish"; do
