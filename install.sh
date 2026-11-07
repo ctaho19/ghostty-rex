@@ -80,7 +80,15 @@ install_font() {
 }
 
 install_ghostty_config() {
-  place "$REPO_DIR/ghostty/config" "${XDG_CONFIG_HOME:-$HOME/.config}/ghostty/config"
+  local conf_dir="${XDG_CONFIG_HOME:-$HOME/.config}/ghostty"
+  place "$REPO_DIR/ghostty/config" "$conf_dir/config"
+
+  # The config names these palettes; install them next to it.
+  local theme
+  for theme in "$REPO_DIR"/ghostty/themes/*; do
+    [ -e "$theme" ] || continue
+    place "$theme" "$conf_dir/themes/$(basename "$theme")"
+  done
 
   # On macOS Ghostty also loads this file *after* ~/.config, so any settings in it win.
   local mac_cfg="$HOME/Library/Application Support/com.mitchellh.ghostty/config"

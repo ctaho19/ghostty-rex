@@ -1,39 +1,46 @@
-# Rex-inspired Ghostty config (v2, from the co-founder demo videos)
-# Installed to ~/.config/ghostty/config by install.sh. Reload: Cmd+Shift+,
-# Needs Ghostty 1.2+ (for the "TokyoNight" theme name) and JetBrains Mono.
+# Rex look for Ghostty 1.4
+#
+# Palette: Rex's own "Abyssal Trench" (dark) and "Ivory Gallery" (light),
+# extracted from Rex Beta.app. Typeface: JetBrains Mono, the font GoRex
+# embeds and the one in its screenshot.
+#
+# Themes live in ~/.config/ghostty/themes/. Reload with Cmd+Shift+,
 
-# --- Colors: Tokyo Night, opaque, like the Rex demos ---
-theme = TokyoNight
-background = #1a1b26
-foreground = #c0caf5
-cursor-color = #c0caf5
-selection-background = #2a2a37
-selection-foreground = #c0caf5
+theme = dark:rex-abyssal-trench,light:rex-ivory-gallery
 
-# --- Opaque window (the terminal area is not translucent in the demos) ---
-background-opacity = 1.0
-
-# --- Seamless titlebar: background runs to the top, traffic lights stay ---
+# --- Window: seamless titlebar, Rex's pane inset, glass over the desktop ---
 macos-titlebar-style = transparent
-window-theme = dark
-window-padding-x = 16
-window-padding-y = 16
+window-theme = auto
+window-padding-x = 14
+window-padding-y = 14
 window-padding-balance = true
+window-padding-color = background
+background-opacity = 0.97
+# Native macOS glass. Requires macOS 26+; use `background-blur = 20` on older.
+background-blur = macos-glass-regular
 
-# --- Font ---
+# --- Type: GoRex uses JetBrains Mono at 11.6pt / 1.0 line height ---
 font-family = JetBrains Mono
-font-size = 13
-adjust-cell-height = 15%
+font-size = 12.5
+adjust-cell-height = 6%
 font-feature = +calt
 
 # --- Cursor ---
 cursor-style = block
 cursor-style-blink = false
 
-# --- Splits: thin dark divider like the 3-pane demo ---
-split-divider-color = #292e42
+# --- Splits: Rex's inactive-pane fade; divider follows the theme ---
 unfocused-split-opacity = 0.9
-unfocused-split-fill = #16161e
+
+# --- Keymap: Ghostty's macOS defaults already match Rex for split
+# right/down, pane focus, zoom, command palette, and prompt jumps.
+# These fill the remaining Rex bindings. ---
+keybind = cmd+enter=new_split:auto
+keybind = ctrl+cmd+f=toggle_fullscreen
+keybind = ctrl+tab=next_tab
+keybind = ctrl+shift+tab=previous_tab
+keybind = alt+cmd+w=close_tab:this
+keybind = shift+cmd+w=close_window
 
 # --- Quality of life ---
 macos-option-as-alt = true
