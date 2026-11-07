@@ -1,6 +1,6 @@
 # ghostty-rex
 
-A [Ghostty](https://ghostty.org) setup built from Rex Beta's own design tokens: **Abyssal Trench** (dark) and **Ivory Gallery** (light), JetBrains Mono, a seamless titlebar, macOS glass, and Rex's pane and tab keymap. It also installs a two-line [Starship](https://starship.rs) prompt.
+A [Ghostty](https://ghostty.org) setup built from Rex Beta's own design tokens: **Static Noir** (dark) and **Ivory Gallery** (light), JetBrains Mono, a seamless titlebar, macOS glass, and Rex's pane and tab keymap. It also installs a two-line [Starship](https://starship.rs) prompt.
 
 ## Install
 
@@ -14,7 +14,7 @@ Then open a new Ghostty window (or press `Cmd+Shift+,`) and start a new shell.
 You don't need Homebrew or admin rights. The script:
 
 - downloads JetBrains Mono into your user font folder, unless it's already installed
-- copies `ghostty/config` and the two `ghostty/themes/rex-*` palettes to `~/.config/ghostty/`
+- copies `ghostty/config` and the `ghostty/themes/rex-*` palettes to `~/.config/ghostty/`
 - installs Starship (with Homebrew if you have it, otherwise to `~/.local/bin`), copies `starship/starship.toml` to `~/.config/starship.toml`, and adds `starship init` to your `.zshrc`, `.bashrc`, or `config.fish`
 - runs `ghostty +validate-config`
 
@@ -28,7 +28,7 @@ Any file it would replace is first renamed to `<file>.bak-<timestamp>`. You can 
 
 ## What matches Rex
 
-- **Palette**: the exact Abyssal Trench dark and Ivory Gallery light colors from Rex Beta 0.1.0 (1853), including all 16 ANSI colors.
+- **Palette**: the exact Static Noir dark and Ivory Gallery light colors from Rex Beta, including all 16 ANSI colors. Abyssal Trench is also included as an alternative dark theme.
 - **Type**: JetBrains Mono, the font GoRex embeds and the one in its screenshot.
 - **Window**: transparent titlebar, 14pt pane inset, macOS glass at 0.97, inactive-pane fade.
 - **Keys**: split right/down, pane focus, zoom, command palette, and prompt jumps already match Ghostty's macOS defaults. The config adds `Cmd+Enter` split auto, `Ctrl+Cmd+F` fullscreen, `Ctrl+Tab` tabs, and `Alt+Cmd+W` close tab.
@@ -49,4 +49,4 @@ Rex's pane cards with program headers, pill tabs, activity dots, and persistent 
 ~/.ghostty-rex/uninstall.sh
 ```
 
-This puts back the newest backup of each config (or deletes the config if there wasn't one), removes the two Rex themes, and removes the Starship lines from your shell rc. The font and the `starship` binary stay installed.
+This puts back the newest backup of each config (or deletes the config if there wasn't one), removes the Rex themes, and removes the Starship lines from your shell rc. The font and the `starship` binary stay installed.
